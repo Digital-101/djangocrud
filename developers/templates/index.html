@@ -1,0 +1,55 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>  
+    {% load static %}  
+    <link rel="stylesheet" href="{% static 'style.css' %}"/> 
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}"/>  
+</head>  
+<body>  
+<form method="POST" class="post-form" action="/dev">  
+        {% csrf_token %}  
+    <div class="container">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <h3>Add Record</h3>  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Laptop Id:</label>  
+    <div class="col-sm-4">  
+      {{ form.lid }}  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Developer Name:</label>  
+    <div class="col-sm-4">  
+      {{ form.dname }}  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Developer Email:</label>  
+    <div class="col-sm-4">  
+      {{ form.demail }}  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Developer Contact:</label>  
+    <div class="col-sm-4">  
+      {{ form.contact }}  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-primary">Submit</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+</body>  
+</html> 
